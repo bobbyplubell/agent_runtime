@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-runtime"
+version = "0.1.0"
+description = "Reusable orchestration/runtime scaffolding for chat-style LLM agents."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Aire Contributors" }]
+dependencies = [
+    "langchain-core>=0.2.0",
+    "langchain-ollama>=0.1.0",
+    "langchain-openai>=0.1.0",
+    "pydantic>=2.6.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+]
+
+[tool.setuptools]
+packages = ["agent_runtime"]
